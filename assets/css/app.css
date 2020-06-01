@@ -3795,28 +3795,20 @@ form {
   }
 
   .call-us {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
     z-index: 1;
     display: none;
   }
 
   .call-us__item {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -25px;
+    width: 30%;
+    height: 40px;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 10px;
     display: block;
-    opacity: 0;
-    transition: transform .3s, opacity .3s;
   }
 
   .call-us__common {
@@ -3833,25 +3825,27 @@ form {
   }
 
   .call-us__item--viber {
-    background: url(../img/viber.png);
-    background-size: cover;
+    background-image: url(../img/viber.png);
+    background-color: #7d3daf;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .call-us__item--whatsapp {
-    background: url(../img/whatsapp.png);
-    background-size: cover;
+    background-image: url(../img/whatsapp.png);
+    background-color: #1bd741;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .call-us__item--phone {
     background: url(../img/phone.png);
-    background-size: cover;
+    background-color: #3eb1ff;
+    background-size: contain;
     background-position: center;
-  }
-
-  .call-us.active .call-us__item {
-    opacity: 1;
+    background-repeat: no-repeat;
   }
 
   .call-us.active .call-us__common {
@@ -3860,21 +3854,12 @@ form {
     background-position: center;
   }
 
-  .call-us.active .call-us__item--phone {
-    transform: translateY(-60px);
-  }
 
-  .call-us.active .call-us__item--viber {
-    transform: translateY(-120px);
-  }
-
-  .call-us.active .call-us__item--whatsapp {
-    transform: translateY(-180px);
-  }
 
   @media (max-width: 992px) {
     .call-us {
-      display: block;
+      display: flex;
+      justify-content: space-between;
     }
     
     .header-index:after {
