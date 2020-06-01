@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta content="" name="author">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="ie=edge" http-equiv="x-ua-compatible"><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4VX2P7');</script>
+    <!-- End Google Tag Manager -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+    <div style="display: none;" id="hidden-content"><h2 class="form__title" >Забронировать квартиру</h2>
+      <form action="POST" id="form">
+        <div class="fill-message"><span>Спасибо за заявку!</br> Мы перезвоним в ближайшее время</span></div>
+        <div class="form-group"><label for="fio">Фамилия Имя Отчество*</label><input type="text" name="name" class="form-control" id="fio" placeholder="Фамилия Имя Отчество">
+<label for="tel">Номер телефона*</label><input type="text" name="tel" class="form-control" id="tel" placeholder="+7(999)-999-99-99">
+<label for="date-in">Дата заезда*</label><input type="date" name="date-in" class="form-control" id="date-in">
+<label for="date-out">Дата выезда*</label><input type="date" name="date-out" class="form-control" id="date-out">
+<textarea class="form-control" id="comment" placeholder="Комментарий:" name="comment" rows="3"></textarea>
+<button type="submit" class="btn btn-primary mb-2">Отправить</button>
+        </div>
+      </form>
+    </div>
+    <header class="header-apart">
+      <div class="container">
+        <div class="row header justify-content-between align-items-center">
+          <div class="col-6 col-md-4 col-lg-3 header__logo"><a class="header__logo-link" href="/"><img class="header__logo-img" src="assets/img/logo-header.png"></a></div>
+          <!-- <div class="col-9"> -->
+          <div class="col-5 col-lg-9">
+            <div class="nav__btn">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 384.97 384.97" style="enable-background:new 0 0 384.97 384.97;" xml:space="preserve">
+                <g id="Menu_1_">
+                  <path d="M12.03,120.303h360.909c6.641,0,12.03-5.39,12.03-12.03c0-6.641-5.39-12.03-12.03-12.03H12.03
+                    c-6.641,0-12.03,5.39-12.03,12.03C0,114.913,5.39,120.303,12.03,120.303z"/>
+                  <path d="M372.939,180.455H12.03c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h360.909c6.641,0,12.03-5.39,12.03-12.03
+                    S379.58,180.455,372.939,180.455z"/>
+                  <path d="M372.939,264.667H132.333c-6.641,0-12.03,5.39-12.03,12.03c0,6.641,5.39,12.03,12.03,12.03h240.606
+                    c6.641,0,12.03-5.39,12.03-12.03C384.97,270.056,379.58,264.667,372.939,264.667z"/>
+                </g>
+              </svg>
+              <span>Меню</span>
+            </div>
+            <nav class="nav">
+              <div class="nav__close-wrap">
+                <div class="nav__close"></div>
+              </div>
+              <ul class="nav__list nav__list-2">
+                <li class="nav__item"> <a class="nav__link" href="/#about">О компании</a></li>
+                <li class="nav__item"> <a class="nav__link" href="/#aparts">Квартиры</a></li>
+                <li class="nav__item"> <a class="nav__link" href="/#gid">Гид по городу</a></li>
+                <li class="nav__item">
+                  <div class="contacts">
+                    <a class="nav__link nav__link_vk" href="https://vk.com/komfort.arzamas" target="_blank">Мы вконтакте</a></div>
+                    <a class="nav__link nav__link_tel" href="tel:+79200602607">+7-9200-602-607</a>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="apart">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h1 class="apart__title">2-комнатная квартира</h1><span class="apart__address">Адрес: Калинина д. 16А, этаж 7-й</span>
+            <div class="apart__beds"><span class="apart__beds-title">Количество спальных мест</span>
+              <div class="apart__beds-list">
+                <div class="apart__beds-item"> <span>Односпальные</span>
+                  <div class="beds__list">
+                    <div class="beds__item">
+                      <svg class="icon icon-bed-fill">
+                        <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                      </svg>
+                    </div>
+                    <div class="beds__item">
+                      <svg class="icon icon-bed-fill">
+                        <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                      </svg>
+                    </div>
+                    <div class="beds__item">
+                      <svg class="icon icon-bed-fill">
+                        <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="apart__beds-item"> <span>Двуспальные</span>
+                  <div class="beds__list">
+                    <div class="beds__item">
+                      <svg class="icon icon-bed-fill">
+                        <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                      </svg>
+                    </div>
+                    <div class="beds__item">
+                      <svg class="icon icon-bed-fill">
+                        <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 apart__price-wrap">
+            <div class="apart__price">от 1300 руб</div>
+            <div class="apart__time">
+              <svg class="icon icon-money">
+                <use xlink:href="assets/sprite/sprite.svg#money"></use>
+              </svg><span>Чем больше срок аренды - тем ниже стоимость</span>
+            </div>
+            <div class="apart__razm"><span>Размещение до 7 человек</span>
+              <div class="card__price-men">
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+                <div class="card__price-men-item">
+                  <svg class="icon icon-man">
+                    <use xlink:href="assets/sprite/sprite.svg#man"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 apart__gallery">
+            <div class="apart__gallery-for-wrap"><img class="apart__gallery-arrows-left" src="assets/img/icons/larrow.svg"><img class="apart__gallery-arrows-right" src="assets/img/icons/rarrow.svg">
+              <div class="apart__gallery-dots">
+                <div class="apart__gallery-dot"></div>
+              </div>
+              <div class="apart__gallery-for">
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/1.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/1.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/2.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/2.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/3.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/3.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/4.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/4.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/5.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/5.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/6.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/6.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/7.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/7.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/8.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/8.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/9.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/9.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/10.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/10.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/11.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/11.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/12.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/12.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/13.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/13.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/14.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/14.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/15.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/15.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/16.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/16.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/17.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/17.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/18.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/18.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/19.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/19.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/20.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/20.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/21.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/21.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/22.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/22.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/23.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/23.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/24.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/24.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/25.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/25.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/26.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/26.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/27.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/27.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/28.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/28.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/29.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/29.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/30.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/30.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/31.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/31.jpg"></a></div>
+                <div class="apart__gallery-for-item"><a href="assets/img/aparts/kalinina_16a/common.jpg" data-fancybox="images"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/common.jpg"></a></div>
+              </div>
+            </div>
+            <div class="apart__gallery-nav">
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/1.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/2.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/3.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/4.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/5.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/6.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/7.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/8.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/9.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/10.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/11.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/12.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/13.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/14.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/15.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/16.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/17.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/18.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/19.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/20.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/21.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/22.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/23.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/24.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/25.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/26.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/27.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/28.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/29.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/30.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/31.jpg"></div>
+              <div class="apart__gallery-nav-item"><img class="apart__gallery-img" src="assets/img/aparts/kalinina_16a/thumb/common.jpg"></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="desc-icons__list">
+              <div class="desc-icons__item">
+                <svg class="icon icon-bed-fill">
+                  <use xlink:href="assets/sprite/sprite.svg#bed-fill"></use>
+                </svg><span>Мебель в комнатах</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-tv">
+                  <use xlink:href="assets/sprite/sprite.svg#tv"></use>
+                </svg><span>Телевизор</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-refrigerator">
+                  <use xlink:href="assets/sprite/sprite.svg#refrigerator"></use>
+                </svg><span>Холодильник</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-washing">
+                  <use xlink:href="assets/sprite/sprite.svg#washing"></use>
+                </svg><span>Стиральная машина</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-kettle">
+                  <use xlink:href="assets/sprite/sprite.svg#kettle"></use>
+                </svg><span>Электрический чайник</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-hairdryer">
+                  <use xlink:href="assets/sprite/sprite.svg#hairdryer"></use>
+                </svg><span>Фен</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-iron">
+                  <use xlink:href="assets/sprite/sprite.svg#iron"></use>
+                </svg><span>Утюг</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-microwave">
+                  <use xlink:href="assets/sprite/sprite.svg#microwave"></use>
+                </svg><span>Микроволновка</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-kichen">
+                  <use xlink:href="assets/sprite/sprite.svg#kichen"></use>
+                </svg><span>Кухонная плита</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-soap">
+                  <use xlink:href="assets/sprite/sprite.svg#soap"></use>
+                </svg><span>Предметы гигиены</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-knife">
+                  <use xlink:href="assets/sprite/sprite.svg#knife"></use>
+                </svg><span>Кухонные пренадлежности</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-blanket">
+                  <use xlink:href="assets/sprite/sprite.svg#blanket"></use>
+                </svg><span>Постельное белье</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-wifi">
+                  <use xlink:href="assets/sprite/sprite.svg#wifi"></use>
+                </svg><span>WI-FI и ТВ</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-hand">
+                  <use xlink:href="assets/sprite/sprite.svg#hand"></use>
+                </svg><span>Гарантия бронирования</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-docs">
+                  <use xlink:href="assets/sprite/sprite.svg#docs"></use>
+                </svg><span>Полный пакет отчетных документов</span>
+              </div>
+              <div class="desc-icons__item">
+                <svg class="icon icon-">
+                  <use xlink:href="assets/sprite/sprite.svg#"></use>
+                </svg><span> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="apart__desc">
+            <div class="apart__desc-title">Подробное описание</div>
+            <p>
+              Рядом с апартаментами развитая городская инфраструктура, завод "АПЗ", "АМЗ", "Автопровод", ТРЦ "Омега", "Ашан", ННГУ им. Лобачевского (бывш. Педагогический институт), институт Инфраструктура: Арзамасский политехнический институт , ННГУ Арзамасский филиал, Приборостроительный колледж им. Пландина, парк им. Гайдара, бизнес центры, сстадион "ЗНАМЯ", салоны красоты, множество магазинов, банки, и многое другое!
+            </p>
+            <p>
+              Работаем как с физ. лицами, так и с организациями! 
+            </p>
+            <p>Подробности просим уточнять по телефону <b>+7-9200-602-607</b></p>
+          </div><a class="btn-blue btn-order btn-order__header" data-fancybox data-src="#hidden-content" href="javascript:;">Забронировать</a>
+        </div>
+        <div class="row">
+          <div class="apart__map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A803c82798723e263eac7d7f1030410e9ef1f0bac6948b6a85e79bda112d033f8&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center header align-items-star">
+          <div class="col-6 col-lg-3 header__logo"><a class="header__logo-link" href="/"><img class="header__logo-img" src="assets/img/logo-white.png"></a></div>
+          <div class="col-9">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"> <a class="nav__link" href="/#about">О компании</a></li>
+                <li class="nav__item"> <a class="nav__link" href="/#aparts">Квартиры</a></li>
+                <li class="nav__item"> <a class="nav__link" href="/#gid">Гид по городу</a></li>
+                <li class="nav__item">
+                  <div class="contacts"><a class="nav__link nav__link_tel" href="tel:+79200602607">+7-9200-602-607</a><a class="nav__link nav__link_vk" href="https://vk.com/komfort.arzamas" target="_blank">Мы вконтакте</a></div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="copyright">© 2020 | Комфорт | Арзамас</div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/foundation.js" defer></script>
+  <script src="assets/js/libs/fitie.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js" defer></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
